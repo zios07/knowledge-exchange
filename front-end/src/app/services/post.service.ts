@@ -15,4 +15,8 @@ export class PostService {
     return this.http.post(this.url + '/posts', post);
   }
 
+  loadPosts() {
+    return this.http.get(this.url + '/posts');
+  }
+
 }

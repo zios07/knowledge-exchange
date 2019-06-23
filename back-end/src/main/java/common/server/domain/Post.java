@@ -27,6 +27,9 @@ public class Post {
 
     private String category;
 
+    public Post() {
+    }
+
     public Post(String title, String content, Date date, List<Comment> comments, User user, String category) {
         this.title = title;
         this.content = content;

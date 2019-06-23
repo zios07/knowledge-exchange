@@ -1,3 +1,19 @@
-<p>
-  post-list works!
-</p>
+<mat-grid-list cols="5" rowHeight="2:2">
+  <mat-grid-tile *ngFor="let post of posts">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>{{post.title}}</mat-card-title>
+        <mat-card-subtitle>{{post.user.account.username}}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+          {{post.content}}
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button>View</button>
+        <button mat-raised-button>Message</button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
