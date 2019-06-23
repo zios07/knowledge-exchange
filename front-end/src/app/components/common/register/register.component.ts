@@ -48,7 +48,6 @@ export class RegisterComponent implements OnInit {
     this.submitted = true;
     const user = this.form.value;
     user.account = new Account(this.form.value.username, this.form.value.password);
-    user.role = new Role(this.form.value.role);
     this.authService.register(user).pipe(delay(1500)).subscribe(resp => {
       this.authService.setConnectedUser(resp);
       this.router.navigate(['/']);

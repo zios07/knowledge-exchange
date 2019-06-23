@@ -18,8 +18,8 @@ public interface IRoleService {
 	 * @return
 	 */
 	Role getRoleUser();
-	
-	
+
+
 	/**
 	 * Fetchs the role ADMIN from database to set it to admin users
 	 * @return Role

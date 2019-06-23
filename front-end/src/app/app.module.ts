@@ -14,6 +14,11 @@ import { LoginComponent } from './components/common/login/login.component';
 import { NavComponent } from './components/common/nav/nav.component';
 import { RegisterComponent } from './components/common/register/register.component';
 import { HttpInterceptorService } from './interceptors/http-interceptor.service';
+import { PostFormComponent } from './components/user/post-form/post-form.component';
+import { PostListComponent } from './components/user/post-list/post-list.component';
+import { PostViewComponent } from './components/user/post-view/post-view.component';
+import { MessageFormComponent } from './components/user/message-form/message-form.component';
+import { MessageListComponent } from './components/user/message-list/message-list.component';
 
 
 @NgModule({
@@ -23,7 +28,12 @@ import { HttpInterceptorService } from './interceptors/http-interceptor.service'
     FooterComponent,
     LoginComponent,
     RegisterComponent,
-    HomeComponent
+    HomeComponent,
+    PostFormComponent,
+    PostListComponent,
+    PostViewComponent,
+    MessageFormComponent,
+    MessageListComponent
   ],
   imports: [
     BrowserModule,
