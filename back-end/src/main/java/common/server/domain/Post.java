@@ -25,10 +25,9 @@ public class Post {
     @ManyToOne
     private User user;
 
-    @ManyToOne
-    private Category category;
+    private String category;
 
-    public Post(String title, String content, Date date, List<Comment> comments, User user, Category category) {
+    public Post(String title, String content, Date date, List<Comment> comments, User user, String category) {
         this.title = title;
         this.content = content;
         this.date = date;
@@ -85,11 +84,11 @@ public class Post {
         this.user = user;
     }
 
-    public Category getCategory() {
+    public String getCategory() {
         return category;
     }
 
-    public void setCategory(Category category) {
+    public void setCategory(String category) {
         this.category = category;
     }
 
