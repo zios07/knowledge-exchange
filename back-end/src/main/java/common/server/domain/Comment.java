@@ -22,6 +22,9 @@ public class Comment {
 
     private Date date;
 
+    public Comment() {
+    }
+
     public Comment(String content, Post post, User user, Date date) {
         this.content = content;
         this.post = post;

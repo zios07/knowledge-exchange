@@ -5,22 +5,13 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class PostService {
+export class CommentService {
 
   url = environment.API_URL;
 
   constructor(private http: HttpClient) { }
 
-  createPost(post) {
-    return this.http.post(this.url + '/posts', post);
+  saveComment(comment) {
+    return this.http.post(this.url + '/comments', comment);
   }
-
-  loadPosts() {
-    return this.http.get(this.url + '/posts');
-  }
-
-  getPostById(id) {
-    return this.http.get(this.url + '/posts/' + id);
-  }
-
 }

@@ -19,7 +19,7 @@ const routes: Routes = [
   { path: 'posts/view/:id', component: PostViewComponent, canActivate: [AuthGuard] },
   { path: 'posts/edit/:id', component: PostFormComponent, canActivate: [AuthGuard] },
   { path: 'messages', component: MessageListComponent, canActivate: [AuthGuard] },
-  { path: 'messages/send', component: MessageFormComponent, canActivate: [AuthGuard] },
+  { path: 'messages/send/:postId', component: MessageFormComponent, canActivate: [AuthGuard] },
   { path: '**', redirectTo: '', canActivate: [AuthGuard] }
 
 ];
