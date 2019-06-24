@@ -15,6 +15,7 @@
 
         <mat-list>
           <mat-list-item *ngFor="let comment of post.comments">
+            <mat-icon mat-list-icon>comment</mat-icon>
             {{comment.content}} - &nbsp;<small style="color: gray">{{comment.user.account.username}}</small>
           </mat-list-item>
         </mat-list>
