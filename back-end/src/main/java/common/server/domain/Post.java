@@ -1,5 +1,7 @@
 package common.server.domain;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
@@ -19,6 +21,7 @@ public class Post {
 
     private Date date;
 
+    @JsonManagedReference
     @OneToMany(mappedBy = "post")
     private List<Comment> comments;
 

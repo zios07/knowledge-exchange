@@ -47,7 +47,7 @@ export class PostViewComponent implements OnInit {
       comment.content = this.form.get('comment').value;
       comment.date = new Date();
       comment.post = this.post;
-      comment.user = resp.data;
+      comment.user = resp;
       this.commentService.saveComment(comment).subscribe(() => {
         this.toastr.info('comment sent successfully');
         this.getPostToView();

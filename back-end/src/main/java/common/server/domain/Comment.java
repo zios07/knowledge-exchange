@@ -1,5 +1,7 @@
 package common.server.domain;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import javax.persistence.*;
 import java.util.Date;
 import java.util.Objects;
@@ -14,6 +16,7 @@ public class Comment {
 
     private String content;
 
+    @JsonBackReference
     @ManyToOne
     private Post post;
 
