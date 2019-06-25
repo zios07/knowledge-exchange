@@ -1,0 +1,51 @@
+<section class="section container">
+
+  <!--Section heading-->
+  <h2 class="section-heading h1 pt-4">Send a message</h2>
+  <!--Section description-->
+
+  <div class="row">
+
+    <!--Grid column-->
+    <div class="col-md-8 col-xl-9">
+      <form>
+
+        <!--Grid row-->
+        <div class="row">
+          <div class="col-md-12">
+            <div class="md-form">
+              <input type="text" id="subject" name="subject" [(ngModel)]="message.subject" class="form-control">
+              <label for="subject" class="">Subject</label>
+            </div>
+          </div>
+        </div>
+        <!--Grid row-->
+
+        <!--Grid row-->
+        <div class="row">
+
+          <!--Grid column-->
+          <div class="col-md-12">
+
+            <div class="md-form">
+              <textarea type="text" id="message" [(ngModel)]="message.body" name="message" rows="3"
+                class="form-control md-textarea"></textarea>
+              <label for="message">Your message</label>
+            </div>
+
+          </div>
+        </div>
+        <!--Grid row-->
+
+      </form>
+
+      <div class="center-on-small-only">
+        <button class="btn btn-primary" [disabled]="!message || !message.subject || !message.body" (click)="sendMessage()">Send</button>
+      </div>
+      <div class="status"> {{status}} </div>
+    </div>
+    <!--Grid column-->
+
+  </div>
+</section>
+<!--Section: Contact v.2-->

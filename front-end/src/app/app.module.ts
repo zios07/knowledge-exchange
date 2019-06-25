@@ -19,6 +19,8 @@ import { PostListComponent } from './components/user/post-list/post-list.compone
 import { PostViewComponent } from './components/user/post-view/post-view.component';
 import { MessageFormComponent } from './components/user/message-form/message-form.component';
 import { MessageListComponent } from './components/user/message-list/message-list.component';
+import { MessageComponent } from './components/message/message.component';
+import { InboxComponent } from './components/inbox/inbox.component';
 
 
 @NgModule({
@@ -33,7 +35,9 @@ import { MessageListComponent } from './components/user/message-list/message-lis
     PostListComponent,
     PostViewComponent,
     MessageFormComponent,
-    MessageListComponent
+    MessageListComponent,
+    MessageComponent,
+    InboxComponent
   ],
   imports: [
     BrowserModule,
